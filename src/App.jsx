@@ -7,6 +7,7 @@ import Favorites from './pages/Favorites';
 import Profile from './pages/Profile';
 import ProfileEdit from './pages/ProfileEdit';
 import NotFound from './pages/NotFound';
+import Loading from './components/Loading';
 
 class App extends React.Component {
   render() {
@@ -14,12 +15,13 @@ class App extends React.Component {
       <div>
         <p>TrybeTunes</p>
         <Switch>
-          <Route exact path="/" render={ () => <Login /> } />
-          <Route exact path="/search" render={ () => <Search /> } />
-          <Route exact path="/album/:id" render={ () => <Album /> } />
-          <Route exact path="/favorites" render={ () => <Favorites /> } />
-          <Route exact path="/profile" render={ () => <Profile /> } />
-          <Route exact path="/profile/edit" render={ () => <ProfileEdit /> } />
+          <Route exact path="/" component={ Login } />
+          <Route exact path="/loading" component={ Loading } />
+          <Route exact path="/search" component={ Search } />
+          <Route exact path="/album/:id" component={ Album } />
+          <Route exact path="/favorites" component={ Favorites } />
+          <Route exact path="/profile" component={ Profile } />
+          <Route exact path="/profile/edit" component={ ProfileEdit } />
           <Route component={ NotFound } />
         </Switch>
       </div>
