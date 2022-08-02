@@ -25,11 +25,12 @@ class Header extends Component {
   render() {
     const { name, loading } = this.state;
     const nameUser = (
-      <h2 data-testid="header-user-name">{ name }</h2>
+      <h3 data-testid="header-user-name">{`Usuário: ${name}`}</h3>
     );
 
     return (
       <header data-testid="header-component">
+        <h1>TryberTunes</h1>
         { loading ? <Loading /> : nameUser }
       </header>
     );
