@@ -1,0 +1,37 @@
+.music-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-card-item {
+  align-items: center;
+  border-bottom: rgb(87, 87, 87) solid 1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+
+.box-audio-controller {
+  width: 300px;
+}
+
+.labelFavorite {
+  font-size: medium;
+}
+
+.track-name {
+  width: 300px;
+}
+
+.track-name:hover {
+  color: rgb(133, 133, 133);
+}
+
+.test {
+  background-color: blue;
+  border: solid red 5px;
+}

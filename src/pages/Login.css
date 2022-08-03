@@ -1,0 +1,28 @@
+.content-login {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+}
+
+.form-login {
+  display: flex;
+  height: 40px;
+  width: 600px;
+}
+
+.form-login input {
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.form-login button {
+  background-color: rgba(255, 255, 255, 0);
+  border: solid rgba(0, 0, 0, 0) 1px;
+  color: white;
+  font-size: xx-large;
+  margin-left: 2px;
+  text-align: center;
+}

@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
 import getMusics from '../services/musicsAPI';
+import './Album.css';
 
 class Album extends Component {
 state = {
@@ -42,17 +43,23 @@ musicsFromAlbum = () => {
 render() {
   const { artist, album, musics, loading, image } = this.state;
 
-  const musicsForCard = musics.filter((_, index) => index)
-    .map((music, index) => <MusicCard { ...music } { ...this.state } key={ index } />);
+  const onlyMusic = musics.filter((_, index) => index > 0);
+  const musicCard = (<MusicCard
+    musicObj={ onlyMusic }
+  />);
 
   const songCard = (
     <div>
       <Header />
-      <h1>Album</h1>
-      <img src={ image } alt={ artist } />
-      <h2 data-testid="album-name">{album}</h2>
-      <h3 data-testid="artist-name">{artist}</h3>
-      <div>{ musicsForCard }</div>
+      <div className="album-content">
+        <div className="info-album">
+          <h1>Album</h1>
+          <img className="img-album-song" src={ image } alt={ artist } />
+          <h2 data-testid="album-name">{album}</h2>
+          <h3 data-testid="artist-name">{artist}</h3>
+        </div>
+        <div className="music-card">{ musicCard }</div>
+      </div>
     </div>
   );
 
@@ -67,9 +74,11 @@ render() {
 }
 
 Album.propTypes = {
-  match: PropTypes.shape.isRequired,
-  params: PropTypes.shape.isRequired,
-  id: PropTypes.string.isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default Album;

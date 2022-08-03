@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
+import './Header.css';
 
 class Header extends Component {
   state = {
@@ -26,34 +27,39 @@ class Header extends Component {
   render() {
     const { name, loading } = this.state;
     const nameUser = (
-      <h3 data-testid="header-user-name">{`Usuário: ${name}`}</h3>
+      <div className="user">
+        <Link to="/profile" className="link-tittle">
+          <h3 className="user-name" data-testid="header-user-name">{`👤 ${name}`}</h3>
+        </Link>
+        <Link to="/" className="link-tittle">
+          <h3 className="logout">Sair</h3>
+        </Link>
+      </div>
     );
 
     return (
-      <header data-testid="header-component">
+      <header data-testid="header-component" className="header">
 
-        <h1>TrybeTunes</h1>
+        <div className="header-top">
+          <div className="title">
+            <Link to="/search" className="link-tittle">
+              <h1>🎧 TrybeTunes</h1>
+            </Link>
+          </div>
 
-        { loading ? <Loading /> : nameUser }
+          { loading ? <Loading /> : nameUser }
+        </div>
 
-        <nav>
-          <ul>
-            <li>
-              <Link data-testid="link-to-search" to="/search">
-                Search
-              </Link>
-            </li>
-            <li>
-              <Link data-testid="link-to-favorites" to="/favorites">
-                Favorites
-              </Link>
-            </li>
-            <li>
-              <Link data-testid="link-to-profile" to="/profile">
-                Profile
-              </Link>
-            </li>
-          </ul>
+        <nav className="navegation">
+          <Link data-testid="link-to-search" to="/search" className="link">
+            Search
+          </Link>
+          <Link data-testid="link-to-favorites" to="/favorites" className="link">
+            Favorites
+          </Link>
+          <Link data-testid="link-to-profile" to="/profile" className="link">
+            Profile
+          </Link>
         </nav>
 
       </header>

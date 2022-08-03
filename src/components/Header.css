@@ -1,0 +1,78 @@
+.header {
+  background-color: rgb(8, 8, 8);
+  color: rgb(216, 216, 216);
+  display: flex;
+  flex-direction: column;
+  height: 170px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.header-top {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.title {
+  display: flex;
+  font-size: x-large;
+  justify-content: space-between;
+}
+
+.user {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.user-name {
+  background-color: rgb(black);
+  border: 1px solid rgb(116, 116, 116);
+  border-radius: 20px;
+  justify-content: center;
+  margin-right: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.logout {
+  color: rgb(87, 87, 87);
+  font-size: medium;
+}
+
+.logout:hover {
+  color: rgb(122, 63, 63);
+}
+
+.navegation {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.link {
+  background-color: rgb(12, 12, 12);
+  border-left: rgb(116, 116, 116) solid 1px;
+  border-right: rgb(116, 116, 116) solid 1px;
+  color: rgb(199, 199, 199);
+  flex: 1;
+  font-size: x-large;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.link-tittle {
+  color: rgb(199, 199, 199);
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: rgb(32, 32, 32);
+}
