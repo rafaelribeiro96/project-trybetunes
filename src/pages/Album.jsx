@@ -43,7 +43,7 @@ render() {
   const { artist, album, musics, loading, image } = this.state;
 
   const musicsForCard = musics.filter((_, index) => index)
-    .map((music, index) => <MusicCard { ...music } key={ index } />);
+    .map((music, index) => <MusicCard { ...music } { ...this.state } key={ index } />);
 
   const songCard = (
     <div>
