@@ -1,0 +1,51 @@
+.title-favorites {
+  border-bottom: rgb(87, 87, 87) solid 1px;
+  margin-left: 40px;
+  margin-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.music-card-content-favorites {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-card-item-favorites {
+  align-items: center;
+  border-bottom: rgb(87, 87, 87) solid 1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.img-favorite {
+  margin-right: 5%;
+}
+
+.box-audio-controller-favorites {
+  margin-right: 5%;
+  max-width: 500px;
+  min-width: 300px;
+  width: 40%;
+}
+
+.labelFavorites {
+  font-size: medium;
+}
+
+.track-name-favorites {
+  width: 300px;
+}
+
+.track-name-favorites:hover {
+  color: rgb(133, 133, 133);
+}
+
+.test {
+  background-color: blue;
+  border: solid red 5px;
+}
