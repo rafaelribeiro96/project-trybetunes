@@ -76,7 +76,7 @@ class MusicCard extends Component {
     );
 
     return (
-      <div data-testid="page-album">
+      <div>
         {
           loading ? <Loading /> : songCard
         }

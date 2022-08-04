@@ -65,7 +65,7 @@ class Login extends Component {
 }
 
 Login.propTypes = {
-  history: PropTypes.objectOf(PropTypes.string).isRequired,
+  history: PropTypes.objectOf(PropTypes.number).isRequired,
 };
 
 export default Login;
