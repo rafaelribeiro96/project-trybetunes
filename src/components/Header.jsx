@@ -29,7 +29,10 @@ class Header extends Component {
     const nameUser = (
       <div className="user">
         <Link to="/profile" className="link-tittle">
-          <h3 className="user-name" data-testid="header-user-name">{name}</h3>
+          <div className="user-name">
+            <span>👤</span>
+            <span data-testid="header-user-name">{name}</span>
+          </div>
         </Link>
         <Link to="/" className="link-tittle">
           <h3 className="logout">Sair</h3>
