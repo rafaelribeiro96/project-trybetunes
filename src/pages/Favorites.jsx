@@ -81,7 +81,7 @@ class Favorites extends React.Component {
     );
 
     return (
-      <div className="page-favorites">
+      <div data-testid="page-favorites">
         <Header />
         <div>
           {
