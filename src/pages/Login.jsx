@@ -20,8 +20,8 @@ class Login extends Component {
     });
   }
 
-  handleChangeButton = async (e) => {
-    e.preventDefault();
+  handleChangeButton = async (event) => {
+    event.preventDefault();
     const { name } = this.state;
     const { history } = this.props;
     this.setState({ loading: true });

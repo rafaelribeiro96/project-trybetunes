@@ -1,0 +1,18 @@
+img {
+  width: 200px;
+}
+
+.profile-edit-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.form-profile-edit {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
