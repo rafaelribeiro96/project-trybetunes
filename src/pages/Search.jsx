@@ -45,7 +45,7 @@ class Search extends Component {
       <div>
 
         {
-          (albuns.length) ? (
+          (albuns.length) > 0 ? (
 
             <div className="father-list-albuns">
               <h3>{`Resultado de álbuns de: ${artist}`}</h3>

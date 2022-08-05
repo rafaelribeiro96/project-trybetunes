@@ -1,14 +1,18 @@
+.search-page {
+  display: flex;
+}
+
 .search-content {
   align-items: center;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
-  padding: 30px;
 }
 
 .form-search {
   position: sticky;
-  top: 130px;
+  top: 80px;
 }
 
 .form-search input {

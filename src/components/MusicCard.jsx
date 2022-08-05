@@ -57,17 +57,18 @@ class MusicCard extends Component {
                 <code>audio</code>
                 .
               </audio>
-              <label className="labelFavorite" htmlFor="favorite">
-                🤍
+              <label className="labelFavorite" htmlFor={ trackId }>
                 <input
                   type="checkbox"
                   name="favorite"
-                  id="favorite"
+                  id={ trackId }
+                  className="favoriteCheck"
                   data-testid={ `checkbox-music-${trackId}` }
                   checked={ favoriteMusics
                     .some((check) => check.trackId === trackId) }
                   onChange={ () => this.saveFavoriteMusics(music) }
                 />
+                <i className="far fa-heart"> ❤</i>
               </label>
             </li>
           );

@@ -2,33 +2,45 @@
   background-color: rgb(8, 8, 8);
   color: rgb(216, 216, 216);
   display: flex;
-  flex-direction: column;
-  height: 170px;
+  flex-flow: column nowrap;
+  height: 100vh;
+  left: 0;
+  max-width: 400px;
+  min-width: 250px;
   position: sticky;
   top: 0;
-  width: 100%;
+  width: 30%;
   z-index: 1;
 }
 
 .header-top {
   align-items: center;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-direction: column;
+  height: 30%;
+  justify-content: space-evenly;
   margin-left: 50px;
   margin-right: 50px;
 }
 
 .title {
   display: flex;
-  font-size: x-large;
-  justify-content: space-between;
+  font-size: large;
+  text-align: center;
+}
+
+.icon-title {
+  font-size: xx-large;
+}
+
+.title h1 {
+  margin: 0;
 }
 
 .user {
   align-items: center;
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .user-name {
@@ -53,16 +65,15 @@
 
 .navegation {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  height: 40%;
+  justify-content: space-evenly;
   width: 100%;
 }
 
 .link {
-  background-color: rgb(12, 12, 12);
-  border-left: rgb(116, 116, 116) solid 1px;
-  border-right: rgb(116, 116, 116) solid 1px;
+  border-bottom: rgb(116, 116, 116) solid 1px;
   color: rgb(199, 199, 199);
-  flex: 1;
   font-size: x-large;
   padding: 10px;
   text-align: center;

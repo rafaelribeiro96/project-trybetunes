@@ -49,8 +49,7 @@ render() {
   />);
 
   const songCard = (
-    <div>
-      <Header />
+    <div className="content">
       <div className="album-content">
         <div className="info-album">
           <h1>Album</h1>
@@ -64,7 +63,8 @@ render() {
   );
 
   return (
-    <div data-testid="page-album">
+    <div data-testid="page-album" className="album-page">
+      <Header />
       {
         loading ? <Loading /> : songCard
       }

@@ -72,67 +72,67 @@ class ProfileEdit extends Component {
         <div>
           <img src={ image } alt={ name } />
         </div>
+        <div className="div-input-profile">
+          <div>
+            <label htmlFor="name" className="flex-data-edit-profile">
+              <span>Nome:</span>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                data-testid="edit-input-name"
+                value={ name }
+                onChange={ this.handleChange }
+              />
+            </label>
+          </div>
 
-        <div className="">
-          <label htmlFor="name">
-            Nome:
-            <input
-              type="text"
-              id="name"
-              name="name"
-              data-testid="edit-input-name"
-              value={ name }
-              onChange={ this.handleChange }
-            />
-          </label>
+          <div>
+            <label htmlFor="email" className="flex-data-edit-profile">
+              <span>E-mail:</span>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                data-testid="edit-input-email"
+                value={ email }
+                onChange={ this.handleChange }
+              />
+            </label>
+          </div>
+
+          <div>
+            <label htmlFor="description" className="flex-data-edit-profile">
+              <span>Descrição:</span>
+              <input
+                type="text"
+                id="description"
+                name="description"
+                data-testid="edit-input-description"
+                value={ description }
+                onChange={ this.handleChange }
+              />
+            </label>
+          </div>
+
+          <div>
+            <label htmlFor="image" className="flex-data-edit-profile">
+              <span> Imagem: </span>
+              <input
+                placeholder="Insira um link"
+                type="text"
+                name="image"
+                id="image"
+                data-testid="edit-input-image"
+                value={ image }
+                onChange={ this.handleChange }
+              />
+            </label>
+          </div>
         </div>
-
-        <div className="">
-          <label htmlFor="email">
-            E-mail:
-            <input
-              type="text"
-              id="email"
-              name="email"
-              data-testid="edit-input-email"
-              value={ email }
-              onChange={ this.handleChange }
-            />
-          </label>
-        </div>
-
-        <div className="">
-          <label htmlFor="description">
-            Descrição:
-            <input
-              type="text"
-              id="description"
-              name="description"
-              data-testid="edit-input-description"
-              value={ description }
-              onChange={ this.handleChange }
-            />
-          </label>
-        </div>
-
-        <div>
-          <label htmlFor="image">
-            Imagem:
-            <input
-              placeholder="Insira um link"
-              type="text"
-              name="image"
-              id="image"
-              data-testid="edit-input-image"
-              value={ image }
-              onChange={ this.handleChange }
-            />
-          </label>
-        </div>
-
         <button
           type="button"
-          className=""
+          className="buttonEditProfile"
           data-testid="edit-button-save"
           disabled={ disableButton }
           onClick={ this.handleChangeButton }
@@ -145,9 +145,9 @@ class ProfileEdit extends Component {
     );
 
     return (
-      <div data-testid="page-profile-edit">
+      <div data-testid="page-profile-edit" className="profile-edit-page">
+        <Header />
         <div className="profile-edit-content">
-          <Header />
           <h1>Editar perfil</h1>
           {
             loading ? <Loading /> : profileForm

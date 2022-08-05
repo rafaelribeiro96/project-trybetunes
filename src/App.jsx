@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import ProfileEdit from './pages/ProfileEdit';
 import NotFound from './pages/NotFound';
 import Loading from './components/Loading';
+import './App.css';
 
 class App extends React.Component {
   render() {

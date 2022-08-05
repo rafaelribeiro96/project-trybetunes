@@ -1,7 +1,17 @@
+.favorite-page {
+  display: flex;
+}
+
+.favorite-content {
+  align-items: center;
+  display: flex;
+  flex: 0.98;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .title-favorites {
   border-bottom: rgb(87, 87, 87) solid 1px;
-  margin-left: 40px;
-  margin-top: 100px;
   padding-bottom: 50px;
   text-align: center;
 }
@@ -9,6 +19,7 @@
 .music-card-content-favorites {
   display: flex;
   flex-direction: column;
+  width: 90%;
 }
 
 .music-card-item-favorites {
@@ -16,29 +27,28 @@
   border-bottom: rgb(87, 87, 87) solid 1px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-bottom: 10px;
   margin-top: 10px;
   padding-bottom: 20px;
 }
 
-.img-favorite {
-  margin-right: 5%;
+.audio-name {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
 }
 
 .box-audio-controller-favorites {
-  margin-right: 5%;
-  max-width: 500px;
-  min-width: 300px;
-  width: 40%;
-}
-
-.labelFavorites {
-  font-size: medium;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .track-name-favorites {
-  width: 300px;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .track-name-favorites:hover {

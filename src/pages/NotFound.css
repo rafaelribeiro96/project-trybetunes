@@ -1,0 +1,15 @@
+.page-not-found {
+  display: flex;
+}
+
+
+.page-not-found-content {
+  align-items: center;
+  display: flex;
+  flex: 0.98;
+  flex-direction: column;
+  font-size: xx-large;
+  font-weight: 900;
+  height: 100vh;
+  justify-content: center;
+}

@@ -46,7 +46,9 @@ class Header extends Component {
         <div className="header-top">
           <div className="title">
             <Link to="/search" className="link-tittle">
-              <h1>🎧 TrybeTunes</h1>
+
+              <span className="icon-title">🎧</span>
+              <h1>TrybeTunes</h1>
             </Link>
           </div>
 

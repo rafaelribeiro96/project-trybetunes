@@ -1,11 +1,26 @@
+.album-page {
+  display: flex;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .album-content {
   display: flex;
   flex-flow: wrap;
   justify-content: space-around;
+  width: 100%;
 }
 
 .info-album {
-  margin-left: 5%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   margin-top: 30px;
   text-align: center;
   width: 30%;
@@ -20,8 +35,6 @@
 .music-card {
   display: flex;
   flex-direction: column;
-  margin-right: 5%;
   margin-top: 30px;
-  min-width: 600px;
-  width: 40%;
+  width: 80%;
 }

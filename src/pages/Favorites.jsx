@@ -37,58 +37,63 @@ class Favorites extends React.Component {
   render() {
     const { loading, favoriteMusics } = this.state;
 
-    const favoriteListContent = (
-
-      <div>
-        <ul className="music-card-content-favorites ">
-          {favoriteMusics.map((music) => {
-            const { artworkUrl100, trackName, previewUrl, trackId } = music;
-            return (
-              <li className="music-card-item-favorites" key={ trackId }>
-                <img className="img-favorite" src={ artworkUrl100 } alt={ trackName } />
-                <div className="track-name-favorites">{ trackName }</div>
-                <audio
-                  className="box-audio-controller-favorites"
-                  data-testid="audio-component"
-                  src={ previewUrl }
-                  controls
-                >
-                  <track kind="captions" />
-                  O seu navegador não suporta o elemento
-                  {' '}
-                  <code>audio</code>
-                  .
-                </audio>
-                <label className="labelFavorites" htmlFor="favorite">
-                  Favorita
-                  <input
-                    type="checkbox"
-                    name="favorite"
-                    id="favorite"
-                    data-testid={ `checkbox-music-${trackId}` }
-                    checked={ favoriteMusics
-                      .some((check) => check.trackId === trackId) }
-                    onChange={ () => this.saveFavoriteMusics(music) }
-                  />
-                </label>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-
+    const divFavorite = (trackId, music) => (
+      <label className="labelFavorite" htmlFor={ trackId }>
+        <input
+          type="checkbox"
+          name="favorite"
+          id={ trackId }
+          className="favoriteCheck"
+          data-testid={ `checkbox-music-${trackId}` }
+          checked={ favoriteMusics
+            .some((check) => check.trackId === trackId) }
+          onChange={ () => this.saveFavoriteMusics(music) }
+        />
+        <i className="far fa-heart">
+          Favorita
+          {/* ❤ */}
+        </i>
+      </label>
     );
 
     return (
-      <div data-testid="page-favorites">
+      <div data-testid="page-favorites" className="favorite-page">
         <Header />
-        <div>
+        <div className="favorite-content">
           <h1 className="title-favorites">Músicas Favoritas</h1>
-          <div>
-            {
-              loading ? <Loading /> : favoriteListContent
-            }
-          </div>
+
+          <ul className="music-card-content-favorites ">
+            {favoriteMusics.map((music) => {
+              const { artworkUrl100, trackName, previewUrl, trackId } = music;
+              return (
+                <li className="music-card-item-favorites" key={ trackId }>
+                  <img
+                    className="img-favorite"
+                    src={ artworkUrl100 }
+                    alt={ trackName }
+                  />
+                  <div className="audio-name">
+                    <div className="track-name-favorites">{ trackName }</div>
+                    <audio
+                      className="box-audio-controller-favorites"
+                      data-testid="audio-component"
+                      src={ previewUrl }
+                      controls
+                    >
+                      <track kind="captions" />
+                      O seu navegador não suporta o elemento
+                      {' '}
+                      <code>audio</code>
+                      .
+                    </audio>
+                  </div>
+
+                  { loading ? <Loading /> : divFavorite(trackId, music) }
+
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     );

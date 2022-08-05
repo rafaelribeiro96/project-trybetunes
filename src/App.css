@@ -1,0 +1,27 @@
+.labelFavorite {
+  font-size: 25px;
+}
+
+.labelFavorite:hover {
+  color: rgb(168, 117, 117);
+}
+
+.favoriteCheck {
+  display: none;
+}
+
+
+.fa-heart {
+  cursor: pointer;
+  padding-right: 4px;
+}
+
+:checked + .fa-heart {
+  background: linear-gradient(#dc5656, #ff79da);
+  background-clip: text;
+  font-weight: 900;
+  -webkit-text-fill-color: transparent;
+
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
