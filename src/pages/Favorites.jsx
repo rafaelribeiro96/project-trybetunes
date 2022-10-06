@@ -50,8 +50,8 @@ class Favorites extends React.Component {
           onChange={ () => this.saveFavoriteMusics(music) }
         />
         <i className="far fa-heart">
-          Favorita
-          {/* ❤ */}
+          {/* Favorita */}
+          ❤
         </i>
       </label>
     );
